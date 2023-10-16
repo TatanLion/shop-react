@@ -40,7 +40,7 @@ export const ShoppingCartProvider = ({children}) => {
     const [ searchByTitle, setSearchByTitle ] = useState('');
 
     //Category
-    const [ searchByCategory, setSearchByCategory ] = useState('')
+    const [ searchByCategory, setSearchByCategory ] = useState(null)
     // console.log(searchByCategory);
 
     //Function to filter by title
