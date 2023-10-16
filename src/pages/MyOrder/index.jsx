@@ -26,7 +26,7 @@ function MyOrder() {
         {
           context.order.length <= 0 ? 
           (
-            <p className='font-bold text-2xl text-center mt-4'>No se han añadido ordenes aún</p>
+            <p className='font-bold text-2xl text-center mt-4'>No orders have been added</p>
           ) : (
             context.order?.[index]?.products.map(product => (
               <OrderCard 

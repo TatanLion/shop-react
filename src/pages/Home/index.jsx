@@ -28,7 +28,7 @@ function Home() {
   return (
     <Layout>
       <div className="flex items-center justify-center relative w-80 mb-3">
-        <h1 className='font-medium text-xl'>Exclusive Products</h1>
+        <h1 className='font-medium text-xl capitalize'>{context.searchByCategory == undefined ? 'Exclusive Products' : context.searchByCategory}</h1>
       </div>
       <input 
         type="text"

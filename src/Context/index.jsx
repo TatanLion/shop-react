@@ -41,6 +41,7 @@ export const ShoppingCartProvider = ({children}) => {
 
     //Category
     const [ searchByCategory, setSearchByCategory ] = useState('')
+    // console.log(searchByCategory);
 
     //Function to filter by title
     const filteredItemsByTitle = (items, searchByTitle) => {
@@ -78,7 +79,11 @@ export const ShoppingCartProvider = ({children}) => {
     // console.log('Elementod filtrados: ', filteredItems);
 
     //Manejar Login
-    const [ userLogin, setUserLogin ] = useState({})
+    const [ dataUser, setDataUser ] = useState(null)
+    // console.log(dataUser);
+    const [ email, setEmail ] = useState('');
+    const [ password, setPassword ] = useState('');
+    // console.log('Email: ', email);
 
     return(
         //Con el provider vamos a enviarle a los hijos (en este caso es toda la app) los valores que le pasemos en el value al provider
@@ -104,6 +109,12 @@ export const ShoppingCartProvider = ({children}) => {
             filteredItems,
             searchByCategory,
             setSearchByCategory,
+            dataUser,
+            setDataUser,
+            email,
+            setEmail,
+            password,
+            setPassword
         }}>
             {children}
         </ShoppingCartContext.Provider>
